@@ -1,5 +1,5 @@
 import { supabase } from './supabase'
-import { encrypt, decrypt, deriveKey } from './crypto'
+import { encrypt, decrypt } from './crypto'
 
 export interface Contact {
   id: string

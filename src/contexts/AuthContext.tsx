@@ -46,7 +46,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       // 监听认证状态变化
       const { data: { subscription } } = supabase.auth.onAuthStateChange(
-        async (event, session) => {
+        async (_event, session) => {
           if (session?.user) {
             setUser({ id: session.user.id, email: session.user.email || '' })
           } else {

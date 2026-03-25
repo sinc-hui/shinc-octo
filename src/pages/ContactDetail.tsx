@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
-import { ContactDecrypted } from '../lib/contacts'
+import type { ContactDecrypted } from '../lib/contacts'
 import { getRecords, getTasks, createRecord, createTask, deleteTask, updateTask } from '../lib/contacts'
 
-export default function ContactDetail({ contact, onBack, password, user }: {
+export default function ContactDetail({ contact, onBack, password }: {
   contact: ContactDecrypted
   onBack: () => void
   password: string
-  user: any
+  user?: any
 }) {
   const [records, setRecords] = useState<any[]>([])
   const [tasks, setTasks] = useState<any[]>([])

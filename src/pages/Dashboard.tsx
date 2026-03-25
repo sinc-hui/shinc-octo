@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../contexts/AuthContext'
-import { getContacts, createContact, deleteContact, ContactDecrypted } from '../lib/contacts'
+import { getContacts, createContact, deleteContact } from '../lib/contacts'
+import type { ContactDecrypted } from '../lib/contacts'
 import ContactDetail from './ContactDetail'
 
 export default function Dashboard() {
